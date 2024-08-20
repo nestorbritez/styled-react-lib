@@ -8,6 +8,7 @@ const $r = (route: TemplateStringsArray) => path.resolve(__dirname, `/${route}`)
  * @doc https://vitejs.dev/config/
  */
 export default defineConfig({
+  root: 'docs',
   plugins: [react()],
   resolve: {
     alias: {
