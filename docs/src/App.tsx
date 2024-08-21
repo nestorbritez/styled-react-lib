@@ -2,6 +2,7 @@ import './App.css'
 
 import reactLogo from '@assets/react.svg'
 import twLogo from '@assets/tailwindcss.svg'
+import { Button } from '@my-ui-library/react'
 import { useState } from 'react'
 import tw from 'tailwind-styled-components'
 
@@ -11,7 +12,6 @@ const Flex = tw.div`flex flex-col items-center justify-center gap-6`
 
 const Wrapper = tw.section`m-auto max-w-lg space-y-12 text-center`
 const Card = tw(Flex)``
-const Button = tw.button`rounded bg-purple-600 px-4 py-2`
 const Code = tw.code`mx-2 rounded bg-yellow-400 px-2 py-1 text-black`
 
 const Title = tw.h1`text-5xl font-bold`

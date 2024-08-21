@@ -21,7 +21,12 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    "baseUrl": ".",
+    "paths": {
+      "@my-ui-library/react": ["package/src/index.ts"]
+    }
   },
-  "include": ["docs/src"]
+  "include": ["docs/src", "package/src"]
 }

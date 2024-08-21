@@ -7,7 +7,10 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint . --fix --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "package": "pnpm run package:esm && pnpm run package:cjs",
+    "package:esm": "tsc --project package/tsconfig.esm.json",
+    "package:cjs": "tsc --project package/tsconfig.cjs.json"
   },
   "devDependencies": {
     "@eslint/compat": "1.1.1",

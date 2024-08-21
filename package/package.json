@@ -1,0 +1,21 @@
+{
+  "name": "@my-ui-library/react",
+  "sideEffects": false,
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "module": "lib/es/index.js",
+  "typings": "lib/index.d.ts",
+  "repository": "https://github.com/nestorbritez/styled-react-lib",
+  "author": "github.com/nestorbritez",
+  "license": "MIT",
+  "scripts": {
+    "build": "pnpm run build:esm && pnpm run build:cjs",
+    "build:esm": "tsc --project tsconfig.esm.json",
+    "build:cjs": "tsc --project tsconfig.cjs.json"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  }
+}

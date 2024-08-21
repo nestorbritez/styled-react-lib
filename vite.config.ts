@@ -1,5 +1,6 @@
 import react from '@vitejs/plugin-react-swc'
 import path from 'path'
+import type { UserConfig } from 'vite'
 import { defineConfig } from 'vite'
 
 const $r = (route: TemplateStringsArray) => path.resolve(__dirname, `/${route}`)
@@ -12,7 +13,12 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
+      '@my-ui-library/react': `/../package/src/index.ts`,
       '@assets': $r`src/assets`,
     },
   },
-})
+  build: {
+    emptyOutDir: true,
+    outDir: '../dist',
+  },
+}) satisfies UserConfig
