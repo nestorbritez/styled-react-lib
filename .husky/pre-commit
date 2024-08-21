@@ -1,3 +1,3 @@
 pnpm lint
-pnpm package
+pnpm build
 git add -A .

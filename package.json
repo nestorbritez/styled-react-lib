@@ -1,15 +1,17 @@
 {
   "name": "styled-react-lib",
-  "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "author": "github.com/nestorbritez",
+  "license": "MIT",
+  "repository": "https://github.com/nestorbritez/styled-react-lib",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
     "lint": "eslint . --fix --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "clean": "rimraf package/lib",
-    "package": "pnpm run clean && pnpm run package:esm && pnpm run package:cjs",
+    "build": "pnpm run clean && pnpm run package:esm && pnpm run package:cjs",
+    "build:docs": "tsc -b && vite build",
     "package:esm": "tsc --project package/tsconfig.esm.json",
     "package:cjs": "tsc --project package/tsconfig.cjs.json",
     "prepare": "husky"
@@ -46,5 +48,6 @@
   "peerDependencies": {
     "react": "18.3.1",
     "react-dom": "18.3.1"
-  }
+  },
+  "packageManager": "pnpm@9.7.1+sha256.46f1bbc8f8020aa9869568c387198f1a813f21fb44c82f400e7d1dbde6c70b40"
 }
