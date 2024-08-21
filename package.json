@@ -8,9 +8,11 @@
     "build": "tsc -b && vite build",
     "lint": "eslint . --fix --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "package": "pnpm run package:esm && pnpm run package:cjs",
+    "clean": "rimraf package/lib",
+    "package": "pnpm run clean && pnpm run package:esm && pnpm run package:cjs",
     "package:esm": "tsc --project package/tsconfig.esm.json",
-    "package:cjs": "tsc --project package/tsconfig.cjs.json"
+    "package:cjs": "tsc --project package/tsconfig.cjs.json",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@eslint/compat": "1.1.1",
@@ -31,7 +33,9 @@
     "eslint-plugin-simple-import-sort": "12.1.1",
     "eslint-plugin-tailwindcss": "3.17.4",
     "globals": "15.9.0",
+    "husky": "9.1.5",
     "postcss": "8.4.41",
+    "rimraf": "6.0.1",
     "tailwind-styled-components": "2.2.0",
     "tailwindcss": "3.4.7",
     "typescript": "5.5.4",

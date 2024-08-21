@@ -14,6 +14,7 @@ export default tseslint.config(
   ...tseslint.configs.recommended,
   eslintPluginPrettierRecommended,
   ...eslintPluginTailwind.configs['flat/recommended'],
+  { ignores: ['**/*.d.ts', 'package/lib/**'] },
   { files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'] },
   {
     settings: {
